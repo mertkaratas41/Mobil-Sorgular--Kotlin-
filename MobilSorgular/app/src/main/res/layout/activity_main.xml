@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnOpenSorgu1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Sorgu 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnOpenSorgu2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Sorgu 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenSorgu1" />
+
+    <Button
+        android:id="@+id/btnOpenSorgu3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Sorgu 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenSorgu2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintSorgu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FF939393"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <TextView
+        android:id="@+id/txtSorgu1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="1-) En uzun mesafeli 5 yolculuktaki gün ve mesafeleri listeleyiniz."
+        android:textColor="#E1E1E1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtHead"
+        app:layout_constraintTop_toBottomOf="@+id/txtHead" />
+
+    <Button
+        android:id="@+id/btnSorgu1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SORGULA"
+        app:layout_constraintEnd_toEndOf="@+id/txtSorgu1"
+        app:layout_constraintStart_toStartOf="@+id/txtSorgu1"
+        app:layout_constraintTop_toBottomOf="@+id/txtSorgu1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSonuc1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="#E1E1E1"
+        app:layout_constraintEnd_toEndOf="@+id/btnSorgu1"
+        app:layout_constraintStart_toStartOf="@+id/btnSorgu1"
+        app:layout_constraintTop_toBottomOf="@+id/btnSorgu1" />
+
+    <TextView
+        android:id="@+id/txtSorgu2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="2-) İki tarih arasında seyahat edilen en az mesafeli 5 yolculuk hangisidir?"
+        android:textColor="#E1E1E1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtHead"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerSonuc1" />
+
+    <DatePicker
+        android:id="@+id/datePicker2Baslangic"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:maxDate=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSorgu2" />
+
+    <DatePicker
+        android:id="@+id/datePicker2Bitis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:maxDate=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker2Baslangic" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSelectLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="#E1E1E1"
+        app:layout_constraintEnd_toEndOf="@+id/btnSehirSec2"
+        app:layout_constraintStart_toStartOf="@+id/btnSehirSec2"
+        app:layout_constraintTop_toBottomOf="@+id/btnSehirSec2" />
+
+    <Button
+        android:id="@+id/btnSorgu2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SORGULA"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerSelectLocation"
+        app:layout_constraintStart_toStartOf="@+id/recyclerSelectLocation"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerSelectLocation" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Sonuc: XXXXXXX"
+        android:textColor="#E1E1E1"
+        app:layout_constraintEnd_toEndOf="@+id/btnSorgu2"
+        app:layout_constraintStart_toStartOf="@+id/btnSorgu2"
+        app:layout_constraintTop_toBottomOf="@+id/btnSorgu2" />
+
+    <TextView
+        android:id="@+id/txtSorgu3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="3-) Belirli bir günde en uzun seyahatin harita üstünde yolunu çiziniz."
+        android:textColor="#E1E1E1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtHead"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+    <DatePicker
+        android:id="@+id/datePicker3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:maxDate=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSorgu3" />
+
+    <Button
+        android:id="@+id/btnSorgu3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="SORGULA"
+        app:layout_constraintEnd_toEndOf="@+id/txtSorgu3"
+        app:layout_constraintStart_toStartOf="@+id/txtSorgu3"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker3" />
+
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnSorgu3"
+        app:layout_constraintStart_toStartOf="@+id/btnSorgu3"
+        app:layout_constraintTop_toBottomOf="@+id/btnSorgu3" />
+
+    <TextView
+        android:id="@+id/sorgu3Km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#E1E1E1" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
+
+
